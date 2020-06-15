@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-12">
+      <h1> Report </h1>
+
+    </div>
+    <table class="table table-striped col-md-12">
+      <thead>
+        <tr>
+          <th >#</th>
+          <th >Driver</th>
+          <th >Miles</th>
+          <th >Average Speed</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let d of data; index as i">
+          <td>{{i + 1}}</td>
+          <td>{{d.name}}</td>
+          <td>{{d.miles}}</td>
+          <td>{{d.speed}}</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>

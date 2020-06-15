@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-12">
+      <h1> Trips </h1>
+
+    </div>
+    <table class="table table-striped col-md-12">
+      <thead>
+        <tr>
+          <th >#</th>
+          <th >Driver</th>
+          <th >Start</th>
+          <th >Stop</th>
+          <th>Miles</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let t of trips; index as i">
+          <td>{{i + 1}}</td>
+          <td>{{t.name}}</td>
+          <td>{{t.start}}</td>
+          <td>{{t.stop}}</td>
+          <td>{{t.miles}}</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>

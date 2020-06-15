@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-12">
+      <h1> Drivers </h1>
+
+    </div>
+    <table class="table table-striped col-md-12">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let d of drivers; index as i">
+          <td >{{i + 1}}</td>
+          <td>{{d}}</td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+
+</div>

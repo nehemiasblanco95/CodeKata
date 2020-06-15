@@ -1,0 +1,57 @@
+<div class="container" >
+  <div class="row" *ngIf="!saved">
+    <div class="col-md-12 text-center">
+      <h1> Upload Data </h1>
+    </div>
+    <div class="file-upload-wrapper col-md-12">
+      <div class="file-box file-box-body view file-upload">
+        <div class="file-box-text file-upload-message">
+          <i class="fa  fa-cloud-upload" [ngClass]="{'text-primary': file.name}"></i>
+          <p>Drag file or click to select from pc</p>
+          <p style="margin-top: 2px;" *ngIf="file!=''">Selected file:</p>
+          <p style="color:#67757c; margin-top: 2px;" *ngIf="file!=''">
+            {{file.name}}
+          </p>
+        </div>
+        <input type="file" (change)="addDoc($event.target.files)" name="file-1[]" id="file-1" class="inputfile inputfile-1 file_upload" accept=".txt" />
+      </div>
+    </div>
+    <div class="col-md-12 text-center mt-3">
+      <button class="btn btn-primary col-md-3" [disabled]="file==''" type="button" (click)="saveData()"> SAVE DATA </button>
+    </div>
+    <div class="col-md-12 text-center mt-3 alert alert-info">
+     Warning: Saving data will replace all actual information in the system.
+    </div>
+
+  </div>
+  <div class="row" *ngIf="saved">
+    <div class="col-md-12 text-center">
+      <h1> File Reader </h1>
+    </div>
+    <div class="col-md-12 alert alert-success">
+      <div class="row">
+        <div class="col-md-12 text-right">
+          <button class="btn btn-danger" (click)="close()"> X </button>
+        </div>
+        <p class="col-md-12 text-center mt-1">
+          Data has been loaded succesfully! Now you can look the following data...
+        </p>
+        <div class="col-md-12 text-center mt-3">
+          <button class="btn btn-primary col-md-3" [routerLink]="['drivers']"> Drivers </button>
+
+        </div>
+        <div class="col-md-12 text-center mt-3">
+          <button class="btn btn-primary col-md-3" [routerLink]="['trips']"> Trips </button>
+
+        </div>
+        <div class="col-md-12 text-center mt-3">
+          <button class="btn btn-primary col-md-3" [routerLink]="['report']"> Report </button>
+        </div>
+      </div>
+
+      </div>
+
+
+
+    </div>
+</div>
