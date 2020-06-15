@@ -10,4 +10,5 @@ It has 4 modules:
 4. REPORT: This component show the required report for this exercise.
 
 In order to test the project, a file called data.txt has been uploaded in the root folder.
+
 Navigator local storage is used for this project.
